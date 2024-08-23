@@ -10,11 +10,12 @@ body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
+  overflow-x: hidden;
 }
 
 header {
   background-color: #f5ba13;
-  margin: auto -18px;
+  width: calc(100% + 32px);
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -101,18 +102,53 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Extra Small Screens (mobile devices) */
+@media (max-width: 480px) {
   header {
-    padding: 12px 24px;
-    margin: auto -35px;
+    width: 120%;
+    /* padding: 16px; */
+    margin-left: -20px;
+  }
+
+  form.create-note {
+    width: 100%;
+    padding: 10px;
   }
 }
 
-@media (max-width: 480px) {
+/* Small Screens (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
   header {
-    padding: 8px 16px;
-    margin: auto -50px;
+    /* width: calc(100% + 16px); */
+    width: 120%;
+    margin-left: -20px;
+  }
+
+  form.create-note {
+    width: 360px;
+  }
+}
+
+/* Medium Screens (small desktops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header {
+    width: calc(100% + 24px);
+    margin: 0 -16px;
+  }
+
+  form.create-note {
+    width: 420px;
+  }
+}
+
+/* Large Screens (desktops and larger) */
+@media (min-width: 1025px) {
+  header {
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+  }
+
+  form.create-note {
+    width: 480px;
   }
 }
