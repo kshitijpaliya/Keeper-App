@@ -14,7 +14,7 @@ body {
 
 header {
   background-color: #f5ba13;
-  margin: auto -16px;
+  margin: auto -18px;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -100,4 +100,19 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 24px;
+    margin: auto -35px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 16px;
+    margin: auto -50px;
+  }
 }
